@@ -83,4 +83,10 @@ export default class GameEngine {
     this.#activePlayerSymbol = this.#currentPlayerSymbol;
     this.setActivePlayer();
   }
+
+  updatePlayerScore(playerSymbol) {
+    playerSymbol === this.#playerOne.symbol
+      ? this.#playerOne.incrementScore()
+      : this.#playerTwo.incrementScore();
+  }
 }
