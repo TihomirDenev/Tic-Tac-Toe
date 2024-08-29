@@ -53,4 +53,34 @@ export default class GameEngine {
     document.getElementById(SCORE_X_ID).textContent = this.#playerOne.score;
     document.getElementById(SCORE_O_ID).textContent = this.#playerTwo.score;
   }
+
+  checkGameState() {
+    const isGameWinnable = this.checkForWinner();
+    const isGameTie = this.checkForTie();
+
+    if (isGameWinnable) {
+      this.showModal(`${isGameWinnable} WINS`, MODAL_DURATION);
+      this.setupNextRound();
+      this.updatePlayerScore(isGameWinnable);
+      this.setScoreDisplay();
+    } else if (isGameTie) {
+      this.showModal(TIE_MESSAGE, MODAL_DURATION);
+      this.setupNextRound();
+    } else {
+      this.switchPlayerTurn();
+    }
+  }
+
+  switchCurrentPlayer() {
+    this.#currentPlayerSymbol === this.#playerOne.symbol
+      ? (this.#currentPlayerSymbol = this.#playerTwo.symbol)
+      : (this.#currentPlayerSymbol = this.#playerOne.symbol);
+  }
+
+  setupNextRound() {
+    this.#board.resetGameBoard();
+    this.switchCurrentPlayer();
+    this.#activePlayerSymbol = this.#currentPlayerSymbol;
+    this.setActivePlayer();
+  }
 }
