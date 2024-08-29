@@ -1,4 +1,4 @@
-import GameEngine from './src/game-engine';
+import GameEngine from './src/game-engine.js';
 
 document.addEventListener('DOMContentLoaded', function () {
   const game = new GameEngine();

@@ -15,6 +15,11 @@ export const TAKEN_CELL_MESSAGE = 'This cell is taken';
 export const TIE_MESSAGE = "It's a tie!";
 export const GAME_RESTARTED_MESSAGE = 'Game Restart!';
 
+export const MODAL_ID = 'modal';
+export const MODAL_CONTENT_ID = 'modal-content';
+export const MODAL_DURATION = 3000;
+export const HELP_MODAL_DURATION = 1000;
+
 export const WIN_COMBINATION = [
   [0, 1, 2],
   [3, 4, 5],
