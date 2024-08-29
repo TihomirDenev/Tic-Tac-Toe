@@ -71,6 +71,22 @@ export default class GameEngine {
     }
   }
 
+  checkForWinner() {
+    for (let i = 0; i < WIN_COMBINATION.length; i++) {
+      const [a, b, c] = WIN_COMBINATION[i];
+
+      if (
+        this.#board.cells[a] &&
+        this.#board.cells[a] === this.#board.cells[b] &&
+        this.#board.cells[a] === this.#board.cells[c]
+      ) {
+        return this.#board.cells[a];
+      }
+    }
+
+    return null;
+  }
+
   switchCurrentPlayer() {
     this.#currentPlayerSymbol === this.#playerOne.symbol
       ? (this.#currentPlayerSymbol = this.#playerTwo.symbol)
