@@ -1,0 +1,132 @@
+@import './variables.css';
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  color: var(--main-text-color);
+  font-family: var(--font-family-default);
+  font-size: 30px;
+  background-color: var(--background-color);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  border-bottom: 3px dotted var(--lines-color);
+}
+
+h2 {
+  margin: 0;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.score-board {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.score-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+}
+
+.game-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 3px solid var(--lines-color);
+  border-bottom: 3px solid var(--lines-color);
+  font-family: var(--font-family-board);
+  font-size: 70px;
+  cursor: pointer;
+}
+
+.game-cell:nth-child(3n) {
+  border-right: none;
+}
+
+.game-cell:nth-last-child(-n + 3) {
+  border-bottom: none;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: 3px solid var(--lines-color);
+  border-radius: 20px;
+  color: var(--main-text-color);
+  font-size: 20px;
+  cursor: pointer;
+  background-color: var(--background-button);
+}
+
+.modal {
+  padding: 3rem 6rem;
+  border: 2px solid var(--lines-color);
+  border-radius: 10px;
+  color: var(--main-text-color);
+  text-align: center;
+  background-color: var(--lines-color);
+  outline: none;
+}
+
+.modal::backdrop {
+  background: black;
+  opacity: 0.6;
+}
+
+.active-player {
+  text-decoration: underline var(--background-button);
+}
+
+.active-player .braces {
+  color: var(--background-button);
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    width: 50%;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .game-board {
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+  }
+
+  .game-cell {
+    font-size: 40px;
+  }
+
+  button {
+    padding: 0.5rem 0.5rem;
+    border: 3px solid var(--lines-color);
+    font-size: 15px;
+  }
+}
