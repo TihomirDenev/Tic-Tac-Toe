@@ -23,6 +23,17 @@ export default class GameEngine {
     this.setupClickHandlers();
   }
 
+  restartGame() {
+    this.showModal(GAME_RESTARTED_MESSAGE, HELP_MODAL_DURATION);
+    this.#board.resetGameBoard();
+    this.#playerOne.resetScore();
+    this.#playerTwo.resetScore();
+    this.#currentPlayerSymbol = this.#playerOne.symbol;
+    this.#activePlayerSymbol = this.#playerOne.symbol;
+    this.setScoreDisplay();
+    this.setActivePlayer();
+  }
+
   setupClickHandlers() {
     const boardContainer = document.getElementById(GAME_BOARD_ID);
 
