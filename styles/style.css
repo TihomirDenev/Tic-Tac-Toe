@@ -1,4 +1,4 @@
-@import "./variables.css";
+@import './variables.css';
 
 body {
   display: flex;
@@ -17,6 +17,10 @@ header {
   justify-content: center;
   width: 80%;
   border-bottom: 3px dotted var(--lines-color);
+}
+
+h1 {
+  margin: 20px;
 }
 
 h2 {
