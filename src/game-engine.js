@@ -17,6 +17,40 @@ export default class GameEngine {
   }
 
   startGame() {
+    this.setActivePlayer();
+    this.setScoreDisplay();
     this.#board.renderGameBoard();
+    this.setupClickHandlers();
+  }
+
+  setupClickHandlers() {
+    const boardContainer = document.getElementById(GAME_BOARD_ID);
+
+    boardContainer.addEventListener('click', (event) => {
+      const cell = event.target.closest(GAME_CELL_CLASS);
+      const index = cell.getAttribute(DATA_INDEX_ATTRIBUTE);
+
+      if (!cell) return;
+
+      if (this.#board.isCellTaken(index))
+        return this.showModal(TAKEN_CELL_MESSAGE, HELP_MODAL_DURATION);
+
+      this.#board.updateCell(index, this.#activePlayerSymbol);
+      this.checkGameState();
+    });
+  }
+
+  setActivePlayer() {
+    const playerXElement = document.getElementById(PLAYER_X_ID);
+    const playerOElement = document.getElementById(PLAYER_O_ID);
+    const isActivePlayerX = this.#activePlayerSymbol === this.#playerOne.symbol;
+
+    playerXElement.classList.toggle('active-player', isActivePlayerX);
+    playerOElement.classList.toggle('active-player', !isActivePlayerX);
+  }
+
+  setScoreDisplay() {
+    document.getElementById(SCORE_X_ID).textContent = this.#playerOne.score;
+    document.getElementById(SCORE_O_ID).textContent = this.#playerTwo.score;
   }
 }
