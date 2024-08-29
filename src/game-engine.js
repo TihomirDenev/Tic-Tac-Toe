@@ -87,6 +87,10 @@ export default class GameEngine {
     return null;
   }
 
+  checkForTie() {
+    return this.#board.cells.every((cell) => cell !== null);
+  }
+
   switchCurrentPlayer() {
     this.#currentPlayerSymbol === this.#playerOne.symbol
       ? (this.#currentPlayerSymbol = this.#playerTwo.symbol)
