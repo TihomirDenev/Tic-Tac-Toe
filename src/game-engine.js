@@ -97,6 +97,18 @@ export default class GameEngine {
       : (this.#currentPlayerSymbol = this.#playerOne.symbol);
   }
 
+  showModal(message, duration) {
+    const modal = document.getElementById(MODAL_ID);
+    const modalContent = document.getElementById(MODAL_CONTENT_ID);
+
+    modalContent.textContent = message;
+    modal.showModal();
+
+    setTimeout(() => {
+      modal.close();
+    }, duration);
+  }
+
   setupNextRound() {
     this.#board.resetGameBoard();
     this.switchCurrentPlayer();
