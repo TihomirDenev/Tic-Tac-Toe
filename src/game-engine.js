@@ -1,5 +1,24 @@
-import Board from './board';
-import Player from './player';
+import {
+  PLAYER_ONE_SYMBOL,
+  PLAYER_TWO_SYMBOL,
+  GAME_BOARD_ID,
+  GAME_CELL_CLASS,
+  DATA_INDEX_ATTRIBUTE,
+  SCORE_X_ID,
+  SCORE_O_ID,
+  WIN_COMBINATION,
+  MODAL_DURATION,
+  PLAYER_X_ID,
+  PLAYER_O_ID,
+  MODAL_ID,
+  MODAL_CONTENT_ID,
+  TAKEN_CELL_MESSAGE,
+  TIE_MESSAGE,
+  HELP_MODAL_DURATION,
+  GAME_RESTARTED_MESSAGE,
+} from './constants.js';
+import Player from './player.js';
+import Board from './board.js';
 
 export default class GameEngine {
   #board;
@@ -51,20 +70,6 @@ export default class GameEngine {
     });
   }
 
-  setActivePlayer() {
-    const playerXElement = document.getElementById(PLAYER_X_ID);
-    const playerOElement = document.getElementById(PLAYER_O_ID);
-    const isActivePlayerX = this.#activePlayerSymbol === this.#playerOne.symbol;
-
-    playerXElement.classList.toggle('active-player', isActivePlayerX);
-    playerOElement.classList.toggle('active-player', !isActivePlayerX);
-  }
-
-  setScoreDisplay() {
-    document.getElementById(SCORE_X_ID).textContent = this.#playerOne.score;
-    document.getElementById(SCORE_O_ID).textContent = this.#playerTwo.score;
-  }
-
   checkGameState() {
     const isGameWinnable = this.checkForWinner();
     const isGameTie = this.checkForTie();
@@ -80,6 +85,29 @@ export default class GameEngine {
     } else {
       this.switchPlayerTurn();
     }
+  }
+
+  setActivePlayer() {
+    const playerXElement = document.getElementById(PLAYER_X_ID);
+    const playerOElement = document.getElementById(PLAYER_O_ID);
+    const isActivePlayerX = this.#activePlayerSymbol === this.#playerOne.symbol;
+
+    playerXElement.classList.toggle('active-player', isActivePlayerX);
+    playerOElement.classList.toggle('active-player', !isActivePlayerX);
+  }
+
+  switchPlayerTurn() {
+    this.#activePlayerSymbol === this.#playerOne.symbol
+      ? (this.#activePlayerSymbol = this.#playerTwo.symbol)
+      : (this.#activePlayerSymbol = this.#playerOne.symbol);
+
+    this.setActivePlayer();
+  }
+
+  switchCurrentPlayer() {
+    this.#currentPlayerSymbol === this.#playerOne.symbol
+      ? (this.#currentPlayerSymbol = this.#playerTwo.symbol)
+      : (this.#currentPlayerSymbol = this.#playerOne.symbol);
   }
 
   checkForWinner() {
@@ -102,10 +130,15 @@ export default class GameEngine {
     return this.#board.cells.every((cell) => cell !== null);
   }
 
-  switchCurrentPlayer() {
-    this.#currentPlayerSymbol === this.#playerOne.symbol
-      ? (this.#currentPlayerSymbol = this.#playerTwo.symbol)
-      : (this.#currentPlayerSymbol = this.#playerOne.symbol);
+  updatePlayerScore(playerSymbol) {
+    playerSymbol === this.#playerOne.symbol
+      ? this.#playerOne.incrementScore()
+      : this.#playerTwo.incrementScore();
+  }
+
+  setScoreDisplay() {
+    document.getElementById(SCORE_X_ID).textContent = this.#playerOne.score;
+    document.getElementById(SCORE_O_ID).textContent = this.#playerTwo.score;
   }
 
   showModal(message, duration) {
@@ -125,11 +158,5 @@ export default class GameEngine {
     this.switchCurrentPlayer();
     this.#activePlayerSymbol = this.#currentPlayerSymbol;
     this.setActivePlayer();
-  }
-
-  updatePlayerScore(playerSymbol) {
-    playerSymbol === this.#playerOne.symbol
-      ? this.#playerOne.incrementScore()
-      : this.#playerTwo.incrementScore();
   }
 }
