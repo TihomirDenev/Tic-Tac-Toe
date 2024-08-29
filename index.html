@@ -13,12 +13,35 @@
     />
     <link
       rel="stylesheet"
-      href="./styles/style.css"
+      href="/style/style.css"
     />
     <title>Tic Tac Toe</title>
   </head>
+
   <body>
-    <p>Hello World</p>
+    <header>
+      <h1>Tic Tac Toe</h1>
+      <div class="divider"></div>
+    </header>
+
+    <section class="game-container">
+      <div class="score-board">
+        <div class="score-box">
+          <h2 id="player-x">Player <span class="braces">( X )</span> -</h2>
+          <h2 id="score-x"></h2>
+        </div>
+        <strong>:</strong>
+        <div class="score-box">
+          <h2 id="score-o"></h2>
+          <h2 id="player-o">- Player <span class="braces">( O )</span></h2>
+        </div>
+      </div>
+
+      <div id="game-board"></div>
+
+      <button class="restart-button">RESET GAME</button>
+    </section>
+
     <script
       type="module"
       src="script.js"
