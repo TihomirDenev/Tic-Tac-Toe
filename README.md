@@ -1,6 +1,6 @@
 <h2 align="center">
   Welcome to My Tic Tac Toe Game <br/>
-  <a href="https://github.com/TihomirDenev/Tic-Tac-Toe" target="_blank">Tic Tac Game</a>
+  <a href="https://tic-tac-toe-bay-psi.vercel.app/" target="_blank">Tic Tac Game</a>
 </h2>
 <div align="center">
   <img alt="Demo" src="assets/Tic-Tac-Toe.png" height="350" />
@@ -65,6 +65,10 @@ npm start
 # 🎮 Contributing
 
 - Feel free to fork this repository and make a pull request if you have any improvements or bug fixes.
+
+# 📲 Information and Deployment
+
+- This site is hosted on Vercel, which provides powerful hosting and serverless functions for static and dynamic websites. You can view the live site here: [My Portfolio](https://portfolio-tihomirdenevs-projects.vercel.app/).
 
 # ⚖ License
 
