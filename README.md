@@ -68,7 +68,7 @@ npm start
 
 # 📲 Information and Deployment
 
-- This site is hosted on Vercel, which provides powerful hosting and serverless functions for static and dynamic websites. You can view the live site here: [My Portfolio](https://portfolio-tihomirdenevs-projects.vercel.app/).
+- This site is hosted on Vercel, which provides powerful hosting and serverless functions for static and dynamic websites. You can view the live site here: [Tic Tac Toe](https://tic-tac-toe-bay-psi.vercel.app/).
 
 # ⚖ License
 
