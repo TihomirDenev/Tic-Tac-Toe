@@ -134,3 +134,30 @@ button {
     font-size: 15px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .game-board {
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+  }
+
+  .game-cell {
+    font-size: 30px;
+  }
+
+  .score-box {
+    gap: 0.5rem;
+  }
+
+  .modal {
+    padding: 2rem 3rem;
+  }
+}
