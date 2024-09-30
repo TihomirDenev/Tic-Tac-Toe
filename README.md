@@ -39,13 +39,20 @@ git clone https://github.com/TihomirDenev/Tic-Tac-Toe.git
 cd Tic-Tac-Toe
 ```
 
-3. To run the project, use the following command:
+3. Install Dependencies Before running the project, you need to install the necessary npm packages. Run the following command in the terminal:
+
+```bash
+npm install
+```
+
+4. To run the project, use the following command:
 
 ```bash
 npm start
 ```
 
-4. Open localhost link in browser to view web-platform.
+5. View the Application Open the provided localhost link in your browser to view the web platform.
+   Typically, the application will be available at http://localhost:3000, but check your terminal for the exact URL.
 
 # 🗜 Usage
 
