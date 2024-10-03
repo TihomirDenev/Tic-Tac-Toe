@@ -27,7 +27,7 @@
 
 # ✅ Getting Started
 
-1. Clone the [Tic-Tac-Toe GitHub repository](https://github.com/TihomirDenev/Tic-Tac-Toe) locally:
+1. Clone the Tic-Tac-Toe [GitHub repository](https://github.com/TihomirDenev/Tic-Tac-Toe) locally:
 
 ```bash
 git clone https://github.com/TihomirDenev/Tic-Tac-Toe.git
