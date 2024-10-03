@@ -6,18 +6,18 @@
   <img alt="Demo" src="assets/Tic-Tac-Toe.png" height="350" />
 </div>
 
-# <img src="https://firebasestorage.googleapis.com/v0/b/dare2fit-f6eb4.appspot.com/o/assets%2FREADME-images%2Fcommunity.png?alt=media&token=893ecd6f-908b-4c1e-9223-25d82f1bb8b1&_gl=1*watnuy*_ga*MjExMzk5MTA5MC4xNjgzMjcwMjg1*_ga_CW55HF8NVT*MTY4NjU3Njg5Ni4xMDMuMS4xNjg2NTc3OTI1LjAuMC4w"  width="30" height="30"> Description
+# 📝 Description
 
 - A responsive web-based Tic Tac Toe game that allows two players to play, track scores, and reset the board dynamically. Built using HTML, CSS, and JavaScript, this game includes a clean and interactive interface with real-time score tracking.
 
-# <img src="https://firebasestorage.googleapis.com/v0/b/dare2fit-f6eb4.appspot.com/o/assets%2FREADME-images%2Fresources.png?alt=media&token=9fe5f5ee-5413-4af3-a50b-c7f01650d1fe&_gl=1*4u0xo2*_ga*MjExMzk5MTA5MC4xNjgzMjcwMjg1*_ga_CW55HF8NVT*MTY4NjU3Njg5Ni4xMDMuMS4xNjg2NTc3OTk4LjAuMC4w"  width="30" height="30"> Technologies Used
+# 🗃️ Technologies Used
 
 - Languages: <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" title="JavaScript" height="20"> <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" title="HTML5" height="20"> <img src="https://raw.githubusercontent.com/gilbarbara/logos/29e8719bf78915c7a82a26a6c203f53c4cb8fff2/logos/css-3_official.svg" title="CSS3" height="20">
 
 - Browsers: <img src="https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white" height="20"> <img src="https://img.shields.io/badge/Safari-000000?style=for-the-badge&logo=Safari&logoColor=white" height="20"> <img src="https://img.shields.io/badge/Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white" height="20"> <img src="https://img.shields.io/badge/Firefox-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white" height="20"> <img src="https://img.shields.io/badge/Opera-FF1B2D?style=for-the-badge&logo=Opera&logoColor=white" height="20">
   <br/><br/>
 
-# <img src="https://firebasestorage.googleapis.com/v0/b/dare2fit-f6eb4.appspot.com/o/assets%2FREADME-images%2Ffeatures.png?alt=media&token=e5fc5779-b3db-41c2-a576-947ca382ea5a&_gl=1*81oei1*_ga*MjExMzk5MTA5MC4xNjgzMjcwMjg1*_ga_CW55HF8NVT*MTY4NjU3Njg5Ni4xMDMuMS4xNjg2NTc3OTgzLjAuMC4w" width="30" height="30"> Features
+# 💡 Features
 
 - **_Two Player Mode:_** Play Tic Tac Toe with another player.
 - **_Score Tracking:_** Tracks and displays scores for both players.
@@ -25,7 +25,7 @@
 - **_Responsive Design:_** Works well on both desktop and mobile devices.
 - **_Visual Feedback:_** Shows modals for game events like win, tie, and restart.
 
-# 🛠 Getting Started
+# ✅ Getting Started
 
 1. Clone the [Tic-Tac-Toe GitHub repository](https://github.com/TihomirDenev/Tic-Tac-Toe) locally:
 
@@ -54,7 +54,7 @@ npm start
 5. View the Application Open the provided localhost link in your browser to view the web platform.
    Typically, the application will be available at http://localhost:3000, but check your terminal for the exact URL.
 
-# 🗜 Usage
+# ⚙️ Usage
 
 - **_Playing the Game:_** Click on the cells of the game board to make a move.
 - **_Restarting the Game:_** Click the "RESET GAME" button to reset the board and scores.
@@ -69,7 +69,7 @@ npm start
 - **_player.js:_** Manages player properties and scores.
 - **_constants.js:_** Contains constant values used throughout the application.
 
-# 🎮 Contributing
+# ✨ Contributing
 
 - Feel free to fork this repository and make a pull request if you have any improvements or bug fixes.
 
@@ -77,6 +77,6 @@ npm start
 
 - This site is hosted on Vercel, which provides powerful hosting and serverless functions for static and dynamic websites. You can view the live site here: [Tic Tac Toe](https://tic-tac-toe-mauve-nine-55.vercel.app/).
 
-# ⚖ License
+# 📇 License
 
 - This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
