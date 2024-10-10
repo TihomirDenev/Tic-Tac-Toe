@@ -75,7 +75,7 @@ export default class GameEngine {
     const isGameTie = this.checkForTie();
 
     if (isGameWinnable) {
-      this.showModal(`${isGameWinnable} WINS`, MODAL_DURATION);
+      this.showModal(`${isGameWinnable} WINS 🏆`, MODAL_DURATION);
       this.setupNextRound();
       this.updatePlayerScore(isGameWinnable);
       this.setScoreDisplay();

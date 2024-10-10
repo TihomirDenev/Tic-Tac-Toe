@@ -12,12 +12,12 @@ export const SCORE_O_ID = 'score-o';
 export const PLAYER_X_ID = 'player-x';
 export const PLAYER_O_ID = 'player-o';
 export const TAKEN_CELL_MESSAGE = 'This cell is taken';
-export const TIE_MESSAGE = "It's a tie!";
-export const GAME_RESTARTED_MESSAGE = 'Game Restart!';
+export const TIE_MESSAGE = "It's a tie! 🤝";
+export const GAME_RESTARTED_MESSAGE = 'New Game! 🎮';
 
 export const MODAL_ID = 'modal';
 export const MODAL_CONTENT_ID = 'modal-content';
-export const MODAL_DURATION = 3000;
+export const MODAL_DURATION = 2000;
 export const HELP_MODAL_DURATION = 1000;
 
 export const WIN_COMBINATION = [
