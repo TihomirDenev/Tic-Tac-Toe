@@ -19,6 +19,7 @@ import {
 } from './constants.js';
 import Player from './player.js';
 import Board from './board.js';
+import { playWarningSound, playWinSound, playRestartSound } from './sounds.js';
 
 export default class GameEngine {
   #board;
@@ -43,6 +44,7 @@ export default class GameEngine {
   }
 
   restartGame() {
+    playRestartSound();
     this.showModal(GAME_RESTARTED_MESSAGE, HELP_MODAL_DURATION);
     this.#board.resetGameBoard();
     this.#playerOne.resetScore();
@@ -62,8 +64,11 @@ export default class GameEngine {
 
       if (!cell) return;
 
-      if (this.#board.isCellTaken(index))
+      if (this.#board.isCellTaken(index)) {
+        playWarningSound();
+
         return this.showModal(TAKEN_CELL_MESSAGE, HELP_MODAL_DURATION);
+      }
 
       this.#board.updateCell(index, this.#activePlayerSymbol);
       this.checkGameState();
@@ -75,6 +80,7 @@ export default class GameEngine {
     const isGameTie = this.checkForTie();
 
     if (isGameWinnable) {
+      playWinSound();
       this.showModal(`${isGameWinnable} WINS 🏆`, MODAL_DURATION);
       this.setupNextRound();
       this.updatePlayerScore(isGameWinnable);

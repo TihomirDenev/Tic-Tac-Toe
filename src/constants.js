@@ -18,7 +18,7 @@ export const GAME_RESTARTED_MESSAGE = 'New Game! 🎮';
 export const MODAL_ID = 'modal';
 export const MODAL_CONTENT_ID = 'modal-content';
 export const MODAL_DURATION = 2000;
-export const HELP_MODAL_DURATION = 1000;
+export const HELP_MODAL_DURATION = 2000;
 
 export const WIN_COMBINATION = [
   [0, 1, 2],
