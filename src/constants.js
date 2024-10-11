@@ -11,7 +11,7 @@ export const SCORE_X_ID = 'score-x';
 export const SCORE_O_ID = 'score-o';
 export const PLAYER_X_ID = 'player-x';
 export const PLAYER_O_ID = 'player-o';
-export const TAKEN_CELL_MESSAGE = 'This cell is taken';
+export const TAKEN_CELL_MESSAGE = 'This cell is taken! ⚠️';
 export const TIE_MESSAGE = "It's a tie! 🤝";
 export const GAME_RESTARTED_MESSAGE = 'New Game! 🎮';
 

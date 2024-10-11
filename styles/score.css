@@ -1,0 +1,25 @@
+.score-board {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.score-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.active-player {
+  text-decoration: underline var(--background-button);
+}
+
+.active-player .braces {
+  color: var(--background-button);
+}
+
+@media screen and (max-width: 610px) {
+  .score-box {
+    gap: 0.5rem;
+  }
+}

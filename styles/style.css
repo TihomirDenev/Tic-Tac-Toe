@@ -1,4 +1,8 @@
 @import './variables.css';
+@import './score.css';
+@import './board.css';
+@import './rules.css';
+@import './modal.css';
 
 body {
   display: flex;
@@ -27,6 +31,12 @@ h2 {
   margin: 0;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
 section {
   display: flex;
   align-items: center;
@@ -34,43 +44,6 @@ section {
   flex-direction: column;
   justify-content: center;
   padding: 2rem;
-}
-
-.score-board {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.score-box {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.game-board {
-  display: grid;
-  grid-template-columns: repeat(3, 150px);
-  grid-template-rows: repeat(3, 150px);
-}
-
-.game-cell {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-right: 3px solid var(--lines-color);
-  border-bottom: 3px solid var(--lines-color);
-  font-family: var(--font-family-board);
-  font-size: 70px;
-  cursor: pointer;
-}
-
-.game-cell:nth-child(3n) {
-  border-right: none;
-}
-
-.game-cell:nth-last-child(-n + 3) {
-  border-bottom: none;
 }
 
 button {
@@ -81,29 +54,6 @@ button {
   font-size: 20px;
   cursor: pointer;
   background-color: var(--background-button);
-}
-
-.modal {
-  padding: 3rem 6rem;
-  border: 2px solid var(--lines-color);
-  border-radius: 10px;
-  color: var(--main-text-color);
-  text-align: center;
-  background-color: var(--lines-color);
-  outline: none;
-}
-
-.modal::backdrop {
-  background: black;
-  opacity: 0.6;
-}
-
-.active-player {
-  text-decoration: underline var(--background-button);
-}
-
-.active-player .braces {
-  color: var(--background-button);
 }
 
 @media screen and (max-width: 1024px) {
@@ -119,23 +69,18 @@ button {
     font-size: 2rem;
   }
 
-  .game-board {
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
-  }
-
-  .game-cell {
-    font-size: 40px;
+  p {
+    font-size: 1rem;
   }
 
   button {
     padding: 0.5rem 0.5rem;
     border: 3px solid var(--lines-color);
-    font-size: 15px;
+    font-size: 1rem;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 610px) {
   h1 {
     font-size: 1.5rem;
   }
@@ -144,20 +89,11 @@ button {
     font-size: 1rem;
   }
 
-  .game-board {
-    grid-template-columns: repeat(3, 80px);
-    grid-template-rows: repeat(3, 80px);
+  p {
+    font-size: 0.5rem;
   }
 
-  .game-cell {
-    font-size: 30px;
-  }
-
-  .score-box {
-    gap: 0.5rem;
-  }
-
-  .modal {
-    padding: 2rem 3rem;
+  button {
+    font-size: 0.7rem;
   }
 }
