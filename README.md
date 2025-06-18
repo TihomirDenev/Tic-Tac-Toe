@@ -1,82 +1,124 @@
-<h2 align="center">
-  Welcome to My Tic Tac Toe Game <br/>
-  <a href="https://tic-tac-toe-mauve-nine-55.vercel.app/" target="_blank">Tic Tac Game</a>
-</h2>
+# 🎮 Tic-Tac-Toe Game
+
 <div align="center">
-  <img alt="Demo" src="assets/Tic-Tac-Toe.png" height="350" />
+  <img alt="Tic-Tac-Toe Game Demo" src="assets/Tic-Tac-Toe.png" height="350" />
+  <br/>
+  <a href="https://tic-tac-toe-mauve-nine-55.vercel.app/" target="_blank">🎯 Play Live Demo</a>
 </div>
 
-# 📝 Description
+## 📝 Description
 
-- A responsive web-based Tic Tac Toe game that allows two players to play, track scores, and reset the board dynamically. Built using HTML, CSS, and JavaScript, this game includes a clean and interactive interface with real-time score tracking.
+A modern, responsive Tic-Tac-Toe game built with vanilla JavaScript using ES6 modules. Features include real-time score tracking, sound effects, visual feedback, and a clean, intuitive interface. The game supports two-player gameplay with dynamic score management and game state handling.
 
-# 🗃️ Technologies Used
+## ✨ Features
 
-- Languages: <img src="https://img.shields.io/badge/JavaScript-FF8C00?style=for-the-badge&logo=javascript&logoColor=white" title="JavaScript" height="20"> <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" title="HTML5" height="20"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" title="CSS3" height="20">
+- **🎯 Two-Player Gameplay**: Classic X vs O gameplay with turn-based mechanics
+- **📊 Score Tracking**: Persistent score tracking for both players across games
+- **🔊 Sound Effects**: Audio feedback for wins, warnings, and game restarts
+- **🎨 Visual Feedback**: Modal notifications for game events (win, tie, restart)
+- **📱 Responsive Design**: Optimized for desktop and mobile devices
+- **🔄 Game Reset**: Reset both the board and scores with one click
+- **⚡ Active Player Indicator**: Visual indication of whose turn it is
+- **📋 Game Rules**: Built-in rules display for easy reference
 
-- Browsers: <img src="https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white" height="20"> <img src="https://img.shields.io/badge/Safari-000000?style=for-the-badge&logo=Safari&logoColor=white" height="20"> <img src="https://img.shields.io/badge/Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white" height="20"> <img src="https://img.shields.io/badge/Firefox-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white" height="20"> <img src="https://img.shields.io/badge/Opera-FF1B2D?style=for-the-badge&logo=Opera&logoColor=white" height="20">
-  <br/><br/>
+## 🛠️ Technologies Used
 
-# 💡 Features
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Build Tools**: Browser-sync for development server
+- **Architecture**: Modular JavaScript with ES6 modules
+- **Deployment**: Vercel
 
-- **_Two Player Mode:_** Play Tic Tac Toe with another player.
-- **_Score Tracking:_** Tracks and displays scores for both players.
-- **_Game Board Reset:_** Reset the game board and scores with a single click.
-- **_Responsive Design:_** Works well on both desktop and mobile devices.
-- **_Visual Feedback:_** Shows modals for game events like win, tie, and restart.
+## 🚀 Getting Started
 
-# ✅ Getting Started
+1. **Clone the repository**
 
-1. Clone the Tic-Tac-Toe [GitHub repository](https://github.com/TihomirDenev/Tic-Tac-Toe) locally:
+   ```bash
+   git clone https://github.com/TihomirDenev/Tic-Tac-Toe.git
+   cd Tic-Tac-Toe
+   ```
 
-```bash
-git clone https://github.com/TihomirDenev/Tic-Tac-Toe.git
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+
+   ```bash
+   npm start
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:3000` (or the URL shown in your terminal)
+
+## 🎮 How to Play
+
+1. **Starting the Game**: The game automatically starts with Player X
+2. **Making Moves**: Click on any empty cell to place your mark (X or O)
+3. **Winning**: Get three of your marks in a row (horizontally, vertically, or diagonally)
+4. **Scoring**: Wins are tracked automatically for both players
+5. **Resetting**: Click "RESET GAME" to clear the board and scores
+
+## 📁 Project Structure
+
+```
+Tic-Tac-Toe/
+├── assets/
+│   ├── sounds/          # Audio files for game feedback
+│   └── favicon.png      # Game favicon
+├── src/
+│   ├── game-engine.js   # Main game logic and state management
+│   ├── board.js         # Game board rendering and cell management
+│   ├── player.js        # Player class and score handling
+│   ├── sounds.js        # Audio playback functionality
+│   └── constants.js     # Game constants and configuration
+├── styles/
+│   ├── style.css        # Main stylesheet
+│   ├── board.css        # Game board styling
+│   ├── modal.css        # Modal dialog styles
+│   ├── score.css        # Score display styling
+│   ├── rules.css        # Rules section styling
+│   └── variables.css    # CSS custom properties
+├── index.html           # Main HTML file
+├── script.js            # Entry point
+└── package.json         # Project configuration
 ```
 
-2. Navigate to the project directory:
+## 🔧 Development
 
-```bash
-cd Tic-Tac-Toe
-```
+**Key Components**
 
-3. Install Dependencies Before running the project, you need to install the necessary npm packages. Run the following command in the terminal:
+- **GameEngine**: Manages game state, player turns, and win detection
+- **Board**: Handles board rendering, cell updates, and game board state
+- **Player**: Manages individual player data and score tracking
+- **Sounds**: Provides audio feedback for game events
 
-```bash
-npm install
-```
+**_Code Architecture_**
 
-4. To run the project, use the following command:
+The project uses modern JavaScript modules with a clean separation of concerns:
 
-```bash
-npm start
-```
+- **Constants**: Centralized configuration and DOM selectors
+- **Modular Design**: Each component has a single responsibility
+- **Event-Driven**: Uses DOM events for user interactions
+- **State Management**: Centralized game state in the GameEngine class
 
-5. View the Application Open the provided localhost link in your browser to view the web platform.
-   Typically, the application will be available at http://localhost:3000, but check your terminal for the exact URL.
+## 🌐 Live Demo
 
-# ⚙️ Usage
+Play the game online: [Tic-Tac-Toe Live Demo](https://tic-tac-toe-mauve-nine-55.vercel.app/)
 
-- **_Playing the Game:_** Click on the cells of the game board to make a move.
-- **_Restarting the Game:_** Click the "RESET GAME" button to reset the board and scores.
-- **_Score Display:_** Scores are displayed for both players at the top of the screen.
+## 📄 License
 
-# 📋 Code Structure
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-- **_index.html:_** The main HTML file for the game layout.
-- **_styles.css:_** Contains styles and layout for the game.
-- **_game-engine.js:_** Contains the main logic for managing the game.
-- **_board.js:_** Manages the game board state and rendering.
-- **_player.js:_** Manages player properties and scores.
-- **_constants.js:_** Contains constant values used throughout the application.
+## 👨‍💻 Author
 
-# ✨ Contributing
+**Tihomir Denev**
 
-- Feel free to fork this repository and make a pull request if you have any improvements or bug fixes.
+- GitHub: [@TihomirDenev](https://github.com/TihomirDenev)
 
-# 📲 Information and Deployment
+---
 
-- This site is hosted on Vercel, which provides powerful hosting and serverless functions for static and dynamic websites. You can view the live site here: [Tic Tac Toe](https://tic-tac-toe-mauve-nine-55.vercel.app/).
-
-# 📇 License
-
-- This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+<div align="center">
+  ⭐ Star this repository if you found it helpful!
+</div>
